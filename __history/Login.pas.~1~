@@ -4,14 +4,10 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
 
 type
-  TF_login = class(TForm)
-    username: TEdit;
-    password: TEdit;
-    Panel1: TPanel;
-    Button1: TButton;
+  TForm1 = class(TForm)
   private
     { Déclarations privées }
   public
@@ -19,7 +15,7 @@ type
   end;
 
 var
-  F_login: TF_login;
+  Form1: TForm1;
 
 implementation
 
