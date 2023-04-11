@@ -14,6 +14,7 @@ type
     UniConnection: TUniConnection;
     MySQLUniProvider1: TMySQLUniProvider;
     UniTable1: TUniTable;
+    UniQuery1: TUniQuery;
   private
     { Déclarations privées }
   public

@@ -1037,6 +1037,8 @@ object F_login: TF_login
       ParentShowHint = False
       ShowHint = False
       TabOrder = 2
+      StyleName = 'Windows'
+      OnClick = Button1Click
     end
   end
 end

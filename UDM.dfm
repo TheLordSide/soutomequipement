@@ -20,4 +20,9 @@ object DM: TDM
     Left = 48
     Top = 208
   end
+  object UniQuery1: TUniQuery
+    Connection = UniConnection
+    Left = 168
+    Top = 120
+  end
 end

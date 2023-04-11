@@ -1,0 +1,41 @@
+unit Login;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Imaging.pngimage;
+
+type
+  TF_login = class(TForm)
+    username: TEdit;
+    password: TEdit;
+    Panel_login: TPanel;
+    Button1: TButton;
+    Image1: TImage;
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  F_login: TF_login;
+
+implementation
+
+{$R *.dfm}
+
+procedure TloginForm.ChampsVide(username, password: TEdit);
+begin
+      if (username.Text = '') or (password.Text = '') then
+  begin
+    ShowMessage('Impossible de continuer car username / mot de passe vide');
+    username.Clear;
+    password.Clear;
+    exit
+  end;
+end;
+
+end.
