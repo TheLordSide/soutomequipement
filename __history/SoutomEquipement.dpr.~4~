@@ -1,0 +1,16 @@
+program SoutomEquipement;
+
+uses
+  Vcl.Forms,
+  Login in 'Login.pas' {F_login},
+  UDM in 'UDM.pas' {DM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TF_login, F_login);
+  Application.CreateForm(TDM, DM);
+  Application.Run;
+end.

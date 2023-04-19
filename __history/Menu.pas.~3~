@@ -1,0 +1,32 @@
+unit Menu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls;
+
+type
+  TF_Menu = class(TForm)
+    Panel1: TPanel;
+    toolbar: TPanel;
+    procedure FormHide(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  F_Menu: TF_Menu;
+
+implementation
+
+{$R *.dfm}
+
+procedure TF_Menu.FormHide(Sender: TObject);
+begin
+     Self.BringToFront;
+end;
+
+end.

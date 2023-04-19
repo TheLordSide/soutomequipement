@@ -1,30 +1,35 @@
 object F_login: TF_login
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
   Caption = 'Windows'
   ClientHeight = 461
-  ClientWidth = 339
+  ClientWidth = 336
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   StyleName = 'Windows'
   TextHeight = 15
   object Panel_login: TPanel
     Left = 0
     Top = 0
-    Width = 339
+    Width = 336
     Height = 461
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
+    ExplicitWidth = 339
     object Image1: TImage
-      Left = 104
-      Top = 16
-      Width = 129
+      Left = 0
+      Top = 0
+      Width = 336
       Height = 105
+      Align = alTop
       Center = True
       Picture.Data = {
         0954506E67496D61676589504E470D0A1A0A0000000D494844520000012C0000
@@ -985,60 +990,214 @@ object F_login: TF_login
         865939ABB44B0000000049454E44AE426082}
       Proportional = True
       Stretch = True
+      ExplicitLeft = 104
+      ExplicitTop = 16
+      ExplicitWidth = 129
     end
-    object password: TEdit
-      Left = 16
-      Top = 224
-      Width = 305
-      Height = 33
-      BevelInner = bvNone
-      BevelOuter = bvNone
+    object Label1: TLabel
+      AlignWithMargins = True
+      Left = 3
+      Top = 443
+      Width = 330
+      Height = 15
+      Align = alBottom
+      Alignment = taCenter
+      Caption = 'SOUTOM EQUIPEMENT '#169' 2023'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
-      Font.Height = -19
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ImeName = 'French'
-      ParentFont = False
-      TabOrder = 0
-      TextHint = 'Mot de passe'
-    end
-    object username: TEdit
-      Left = 16
-      Top = 168
-      Width = 305
-      Height = 33
-      BevelInner = bvNone
-      BevelOuter = bvNone
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -19
-      Font.Name = 'Segoe UI'
-      Font.Style = []
-      ImeName = 'French'
-      ParentFont = False
-      TabOrder = 1
-      TextHint = 'Nom utlisateur'
-    end
-    object Button1: TButton
-      Left = 104
-      Top = 304
-      Width = 129
-      Height = 41
-      Caption = 'connexion'
-      DoubleBuffered = False
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clGreen
       Font.Height = -12
       Font.Name = 'Segoe UI'
-      Font.Style = []
-      ParentDoubleBuffered = False
+      Font.Style = [fsBold]
       ParentFont = False
-      ParentShowHint = False
-      ShowHint = False
-      TabOrder = 2
-      StyleName = 'Windows'
-      OnClick = Button1Click
+      ExplicitWidth = 173
+    end
+    object GridPanel1: TGridPanel
+      Left = 0
+      Top = 399
+      Width = 336
+      Height = 41
+      Align = alBottom
+      BevelOuter = bvNone
+      ColumnCollection = <
+        item
+          Value = 50.000000000000000000
+        end
+        item
+          Value = 50.000000000000000000
+        end>
+      ControlCollection = <
+        item
+          Column = 0
+          Control = BitBtn1
+          Row = 0
+        end
+        item
+          Column = 1
+          Control = BitBtn2
+          Row = 0
+        end>
+      RowCollection = <
+        item
+          Value = 100.000000000000000000
+        end>
+      TabOrder = 0
+      ExplicitTop = 396
+      ExplicitWidth = 339
+      object BitBtn1: TBitBtn
+        AlignWithMargins = True
+        Left = 3
+        Top = 3
+        Width = 162
+        Height = 35
+        Align = alClient
+        Cancel = True
+        Caption = 'Connexion'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clGreen
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 0
+        TabStop = False
+        OnClick = BitBtn1Click
+        ExplicitLeft = 144
+        ExplicitTop = 16
+        ExplicitWidth = 75
+        ExplicitHeight = 25
+      end
+      object BitBtn2: TBitBtn
+        AlignWithMargins = True
+        Left = 171
+        Top = 3
+        Width = 162
+        Height = 35
+        Align = alClient
+        Caption = 'Quitter'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clRed
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentFont = False
+        TabOrder = 1
+        TabStop = False
+        OnClick = BitBtn2Click
+        ExplicitLeft = 264
+        ExplicitTop = 24
+        ExplicitWidth = 75
+        ExplicitHeight = 25
+      end
+    end
+    object GRID_USER_PASS: TGridPanel
+      AlignWithMargins = True
+      Left = 3
+      Top = 108
+      Width = 330
+      Height = 189
+      Align = alTop
+      BevelOuter = bvNone
+      ColumnCollection = <
+        item
+          Value = 100.000000000000000000
+        end>
+      ControlCollection = <
+        item
+          Column = 0
+          Control = username
+          Row = 0
+        end
+        item
+          Column = 0
+          Control = password
+          Row = 1
+        end
+        item
+          Column = 0
+          Control = CheckBox1
+          Row = 2
+        end>
+      Padding.Bottom = 10
+      RowCollection = <
+        item
+          Value = 33.457284400953660000
+        end
+        item
+          Value = 33.457284400953660000
+        end
+        item
+          Value = 33.085431198092680000
+        end>
+      TabOrder = 1
+      object username: TEdit
+        AlignWithMargins = True
+        Left = 10
+        Top = 5
+        Width = 310
+        Height = 40
+        Margins.Left = 10
+        Margins.Top = 5
+        Margins.Right = 10
+        Margins.Bottom = 5
+        Align = alClient
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ImeName = 'French'
+        ParentFont = False
+        TabOrder = 0
+        TextHint = 'Nom utlisateur'
+        ExplicitLeft = 107
+        ExplicitTop = 86
+        ExplicitWidth = 121
+        ExplicitHeight = 23
+      end
+      object password: TEdit
+        AlignWithMargins = True
+        Left = 10
+        Top = 65
+        Width = 310
+        Height = 40
+        Margins.Left = 10
+        Margins.Top = 5
+        Margins.Right = 10
+        Margins.Bottom = 5
+        Align = alClient
+        BevelInner = bvNone
+        BevelOuter = bvNone
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -19
+        Font.Name = 'Segoe UI'
+        Font.Style = []
+        ImeName = 'French'
+        ParentFont = False
+        TabOrder = 1
+        TextHint = 'Mot de passe'
+        ExplicitLeft = 71
+        ExplicitTop = 107
+        ExplicitWidth = 121
+        ExplicitHeight = 23
+      end
+      object CheckBox1: TCheckBox
+        AlignWithMargins = True
+        Left = 10
+        Top = 123
+        Width = 317
+        Height = 43
+        Margins.Left = 10
+        Align = alClient
+        Caption = 'Afficher le mot de passe'
+        TabOrder = 2
+        ExplicitLeft = 0
+        ExplicitTop = 120
+        ExplicitWidth = 241
+        ExplicitHeight = 49
+      end
     end
   end
 end
