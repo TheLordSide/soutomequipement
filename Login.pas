@@ -21,10 +21,10 @@ type
     password: TEdit;
     CheckBox1: TCheckBox;
     procedure ChampsVide(username, password: TEdit);
-    procedure Button1Click(Sender: TObject);
     procedure userexistant(username, password: TEdit);
     procedure BitBtn1Click(Sender: TObject);
     procedure BitBtn2Click(Sender: TObject);
+    procedure CheckBox1Click(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -38,23 +38,16 @@ implementation
 
 {$R *.dfm}
 
-uses UDM, Menu;
+uses UDM, Menu, Admin;
 
 procedure TF_login.BitBtn1Click(Sender: TObject);
 begin
   ChampsVide(username, password);
-  userexistant(username, password)
 end;
 
 procedure TF_login.BitBtn2Click(Sender: TObject);
 begin
-Application.Terminate
-end;
-
-procedure TF_login.Button1Click(Sender: TObject);
-begin
-  ChampsVide(username, password);
-  userexistant(username, password)
+  Application.Terminate;
 end;
 
 procedure TF_login.ChampsVide(username, password: TEdit);
@@ -65,23 +58,44 @@ begin
     ShowMessage('Impossible de continuer car username / mot de passe vide');
     password.Clear;
     username.Clear;
-    exit
+    Exit;
+  end
+  else
+  begin
+    userexistant(username, password);
+  end;
+
+end;
+
+procedure TF_login.CheckBox1Click(Sender: TObject);
+begin
+  if CheckBox1.Checked = False then
+  begin
+    password.PasswordChar := '*';
+  end
+  else
+  begin
+    password.PasswordChar := ''#0'';
   end;
 
 end;
 
 procedure TF_login.userexistant(username, password: TEdit);
+
+Var
+  rolename: string;
 begin
+
   DM.UniConnection.Connected := True;
   DM.UniQuery1.close;
   DM.UniQuery1.sql.Clear;
   try
     DM.UniQuery1.sql.Text :=
-      'select * from  utilisateur where Nomuti = :username and Mdp = :password';
+      'select * from utilisateur where Nomuti = :username and Mdp = :password';
     DM.UniQuery1.parambyname('username').asstring := username.Text;
     DM.UniQuery1.parambyname('password').asstring := password.Text;
-    DM.UniQuery1.open;
-
+    DM.UniQuery1.ExecSQL;
+    rolename := DM.UniQuery1.FieldByName('role').asstring;
     if DM.UniQuery1.RecordCount = 0 then
     Begin
       ShowMessage
@@ -89,16 +103,33 @@ begin
     end
     else
     begin
-      F_Menu := TF_menu.Create(Self);
-      try
-        F_login.Hide;
-        username.Clear;
-        password.Clear;
-        F_Menu.ShowModal;
-      finally
-        F_Menu.Free;
-        F_login.show;
+      if rolename = 'admin' then
+      begin
+        F_admin := TF_admin.Create(Self);
+        try
+          F_login.Hide;
+          username.Clear;
+          password.Clear;
+          F_admin.ShowModal;
+        finally
+          F_admin.Free;
+          F_login.show;
+        end;
+      end
+      else
+      begin
+        F_Menu := TF_Menu.Create(Self);
+        try
+          F_login.Hide;
+          username.Clear;
+          password.Clear;
+          F_Menu.ShowModal;
+        finally
+          F_Menu.Free;
+          F_login.show;
+        end;
       end;
+
     end;
   except
     on E: Exception do

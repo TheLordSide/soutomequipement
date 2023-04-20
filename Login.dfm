@@ -5,7 +5,7 @@ object F_login: TF_login
   BorderStyle = bsSingle
   Caption = 'Windows'
   ClientHeight = 461
-  ClientWidth = 336
+  ClientWidth = 329
   Color = clWhite
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,17 +18,18 @@ object F_login: TF_login
   object Panel_login: TPanel
     Left = 0
     Top = 0
-    Width = 336
+    Width = 329
     Height = 461
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 339
     object Image1: TImage
-      Left = 0
-      Top = 0
-      Width = 336
-      Height = 105
+      AlignWithMargins = True
+      Left = 3
+      Top = 3
+      Width = 323
+      Height = 129
+      Margins.Bottom = 5
       Align = alTop
       Center = True
       Picture.Data = {
@@ -990,15 +991,15 @@ object F_login: TF_login
         865939ABB44B0000000049454E44AE426082}
       Proportional = True
       Stretch = True
-      ExplicitLeft = 104
-      ExplicitTop = 16
-      ExplicitWidth = 129
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 336
     end
     object Label1: TLabel
       AlignWithMargins = True
       Left = 3
       Top = 443
-      Width = 330
+      Width = 323
       Height = 15
       Align = alBottom
       Alignment = taCenter
@@ -1014,7 +1015,7 @@ object F_login: TF_login
     object GridPanel1: TGridPanel
       Left = 0
       Top = 399
-      Width = 336
+      Width = 329
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
@@ -1041,13 +1042,11 @@ object F_login: TF_login
           Value = 100.000000000000000000
         end>
       TabOrder = 0
-      ExplicitTop = 396
-      ExplicitWidth = 339
       object BitBtn1: TBitBtn
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 162
+        Width = 158
         Height = 35
         Align = alClient
         Cancel = True
@@ -1061,16 +1060,12 @@ object F_login: TF_login
         TabOrder = 0
         TabStop = False
         OnClick = BitBtn1Click
-        ExplicitLeft = 144
-        ExplicitTop = 16
-        ExplicitWidth = 75
-        ExplicitHeight = 25
       end
       object BitBtn2: TBitBtn
         AlignWithMargins = True
-        Left = 171
+        Left = 167
         Top = 3
-        Width = 162
+        Width = 159
         Height = 35
         Align = alClient
         Caption = 'Quitter'
@@ -1083,17 +1078,13 @@ object F_login: TF_login
         TabOrder = 1
         TabStop = False
         OnClick = BitBtn2Click
-        ExplicitLeft = 264
-        ExplicitTop = 24
-        ExplicitWidth = 75
-        ExplicitHeight = 25
       end
     end
     object GRID_USER_PASS: TGridPanel
       AlignWithMargins = True
       Left = 3
-      Top = 108
-      Width = 330
+      Top = 140
+      Width = 323
       Height = 189
       Align = alTop
       BevelOuter = bvNone
@@ -1133,7 +1124,7 @@ object F_login: TF_login
         AlignWithMargins = True
         Left = 10
         Top = 5
-        Width = 310
+        Width = 303
         Height = 40
         Margins.Left = 10
         Margins.Top = 5
@@ -1144,23 +1135,20 @@ object F_login: TF_login
         BevelOuter = bvNone
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -20
         Font.Name = 'Segoe UI'
         Font.Style = []
         ImeName = 'French'
         ParentFont = False
         TabOrder = 0
         TextHint = 'Nom utlisateur'
-        ExplicitLeft = 107
-        ExplicitTop = 86
-        ExplicitWidth = 121
-        ExplicitHeight = 23
+        ExplicitHeight = 36
       end
       object password: TEdit
         AlignWithMargins = True
         Left = 10
         Top = 65
-        Width = 310
+        Width = 303
         Height = 40
         Margins.Left = 10
         Margins.Top = 5
@@ -1171,32 +1159,27 @@ object F_login: TF_login
         BevelOuter = bvNone
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clWindowText
-        Font.Height = -19
+        Font.Height = -20
         Font.Name = 'Segoe UI'
         Font.Style = []
         ImeName = 'French'
         ParentFont = False
+        PasswordChar = '*'
         TabOrder = 1
         TextHint = 'Mot de passe'
-        ExplicitLeft = 71
-        ExplicitTop = 107
-        ExplicitWidth = 121
-        ExplicitHeight = 23
+        ExplicitHeight = 36
       end
       object CheckBox1: TCheckBox
         AlignWithMargins = True
         Left = 10
         Top = 123
-        Width = 317
+        Width = 310
         Height = 43
         Margins.Left = 10
         Align = alClient
         Caption = 'Afficher le mot de passe'
         TabOrder = 2
-        ExplicitLeft = 0
-        ExplicitTop = 120
-        ExplicitWidth = 241
-        ExplicitHeight = 49
+        OnClick = CheckBox1Click
       end
     end
   end

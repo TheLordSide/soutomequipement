@@ -4,16 +4,15 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Menus, Vcl.WinXCtrls,
+  Vcl.WinXPanels, Vcl.Imaging.pngimage;
 
 type
   TF_Menu = class(TForm)
     Panel1: TPanel;
-    MainMenu1: TMainMenu;
-    Options1: TMenuItem;
-    Deconnexion1: TMenuItem;
-    Fichier1: TMenuItem;
-    Afficher1: TMenuItem;
+    SplitView1: TSplitView;
+    Image1: TImage;
+    CardPanel1: TCardPanel;
     procedure CreateParams(var Params: TCreateParams); override;
   private
     { Déclarations privées }

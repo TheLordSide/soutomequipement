@@ -13,6 +13,15 @@
     <Transaction>2023/04/19 09:11:29.000.618,=D:\Projets\Delphi\Soutom\Unit1.pas</Transaction>
     <Transaction>2023/04/19 09:12:04.000.486,D:\Projets\Delphi\Soutom\Unit1.dfm=D:\Projets\Delphi\Soutom\Menu.dfm</Transaction>
     <Transaction>2023/04/19 09:12:04.000.486,D:\Projets\Delphi\Soutom\Unit1.pas=D:\Projets\Delphi\Soutom\Menu.pas</Transaction>
+    <Transaction>2023/04/19 21:37:13.000.478,=D:\Projets\Delphi\Soutom\Unit1.pas</Transaction>
+    <Transaction>2023/04/19 21:37:42.000.555,D:\Projets\Delphi\Soutom\Admin.dfm=D:\Projets\Delphi\Soutom\Unit1.dfm</Transaction>
+    <Transaction>2023/04/19 21:37:42.000.555,D:\Projets\Delphi\Soutom\Admin.pas=D:\Projets\Delphi\Soutom\Unit1.pas</Transaction>
+    <Transaction>2023/04/20 10:21:51.000.355,=D:\Projets\Delphi\Soutom\Unit1.pas</Transaction>
+    <Transaction>2023/04/20 10:22:19.000.981,D:\Projets\Delphi\Soutom\Unit1.dfm=D:\Projets\Delphi\Soutom\UserMgmt.dfm</Transaction>
+    <Transaction>2023/04/20 10:22:19.000.981,D:\Projets\Delphi\Soutom\Unit1.pas=D:\Projets\Delphi\Soutom\UserMgmt.pas</Transaction>
+    <Transaction>2023/04/20 15:36:57.000.270,=D:\Projets\Delphi\Soutom\Unit1.pas</Transaction>
+    <Transaction>2023/04/20 15:38:35.000.778,D:\Projets\Delphi\Soutom\Role.dfm=D:\Projets\Delphi\Soutom\Unit1.dfm</Transaction>
+    <Transaction>2023/04/20 15:38:35.000.778,D:\Projets\Delphi\Soutom\Role.pas=D:\Projets\Delphi\Soutom\Unit1.pas</Transaction>
   </Transactions>
 	<BT_BuildType>Debug</BT_BuildType>
 </BorlandProject>

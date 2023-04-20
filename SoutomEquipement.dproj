@@ -111,6 +111,18 @@
             <Form>F_Menu</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="Admin.pas">
+            <Form>F_admin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UserMgmt.pas">
+            <Form>F_users</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Role.pas">
+            <Form>F_role</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

@@ -15,6 +15,15 @@ type
     MySQLUniProvider1: TMySQLUniProvider;
     UniTable1: TUniTable;
     UniQuery1: TUniQuery;
+    UniQuery1idutilisateur: TIntegerField;
+    UniQuery1Nomuti: TStringField;
+    UniQuery1Mdp: TStringField;
+    UniQuery1statut: TStringField;
+    UniQuery1role: TStringField;
+    UniQuery1datecreation: TDateField;
+    UniQuery1datelast: TDateField;
+    T_role: TUniTable;
+    UniDataSource1: TUniDataSource;
   private
     { Déclarations privées }
   public
