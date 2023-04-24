@@ -120,6 +120,7 @@ object F_role: TF_role
         Height = 530
         OptionsEx = [dgeEnableSort, dgeLocalFilter, dgeLocalSorting, dgeRecordCount, dgeStretch, dgeSummary]
         Align = alClient
+        BorderStyle = bsNone
         DataSource = DM.UniDataSource1
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
         PopupMenu = PopupMenu1
