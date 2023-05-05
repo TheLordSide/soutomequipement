@@ -12,7 +12,6 @@ object F_role: TF_role
   Font.Style = []
   Position = poScreenCenter
   StyleName = 'Windows'
-  OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0

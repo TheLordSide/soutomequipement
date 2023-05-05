@@ -22,8 +22,8 @@ type
     UniQuery1role: TStringField;
     UniQuery1datecreation: TDateField;
     UniQuery1datelast: TDateField;
-    T_role: TUniTable;
     UniDataSource1: TUniDataSource;
+    T_utilisateur: TUniTable;
   private
     { Déclarations privées }
   public

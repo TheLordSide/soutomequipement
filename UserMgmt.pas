@@ -6,7 +6,8 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.WinXCtrls,
-  Vcl.ComCtrls, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.WinXPanels;
+  Vcl.ComCtrls, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.WinXPanels, Vcl.StdCtrls,
+  Vcl.ExtDlgs;
 
 type
   TF_users = class(TForm)
@@ -21,9 +22,20 @@ type
     RelativePanel2: TRelativePanel;
     Image1: TImage;
     RelativePanel3: TRelativePanel;
+    pseudo: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    ComboBox1: TComboBox;
+    GridPanel2: TGridPanel;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
     SpeedButton1: TSpeedButton;
     SpeedButton2: TSpeedButton;
+    OpenPictureDialog1: TOpenPictureDialog;
+    procedure compteExistant(pseudo:TEdit);
     procedure CreateParams(var Params: TCreateParams); override;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -36,7 +48,26 @@ var
 implementation
 
 {$R *.dfm}
+
+uses UDM;
 { TF_users }
+
+procedure TF_users.compteExistant(pseudo: TEdit);
+begin
+  DM.UniQuery1.Close;
+  DM.UniQuery1.Fields.Clear;
+  DM.UniQuery1.SQL.Text := 'Select * from utilisateur where Nomuti = :username';
+  DM.UniQuery1.parambyname('username').asstring := pseudo.Text;
+  DM.UniQuery1.ExecSQL;
+  if DM.UniQuery1.RecordCount = 0 then
+  begin
+
+  end
+  else
+  begin
+    ShowMessage('Le role que vous voulez enregistrer exite deja')
+  end;
+end;
 
 procedure TF_users.CreateParams(var Params: TCreateParams);
 begin
@@ -44,6 +75,27 @@ begin
   Params.ExStyle := Params.ExStyle or WS_EX_APPWINDOW;
   Params.WndParent := GetDesktopWindow
 
+end;
+
+procedure TF_users.SpeedButton1Click(Sender: TObject);
+Var
+  filename: string;
+begin
+  OpenPictureDialog1.Execute();
+  filename := OpenPictureDialog1.filename;
+  Image1.Picture.LoadFromFile(filename);
+end;
+
+procedure TF_users.SpeedButton2Click(Sender: TObject);
+Var
+  filename: string;
+begin
+  filename := ExtractFilePath(Application.ExeName) + 'res\img\avatar.png';
+  // Chemin absolu
+  if FileExists(filename) then
+    Image1.Picture.LoadFromFile(filename)
+  else
+    ShowMessage('Le fichier ' + filename + ' n''existe pas.');
 end;
 
 end.

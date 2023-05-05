@@ -23,7 +23,6 @@ type
     procedure Emptyrole(rolename: TEdit);
     procedure SpeedButton1Click(Sender: TObject);
     procedure Enregistrerrole(rolename: TEdit);
-    procedure FormCreate(Sender: TObject);
     procedure Supprimerlerole1Click(Sender: TObject);
   private
     { Déclarations privées }
@@ -61,20 +60,12 @@ begin
   DM.UniQuery1.ExecSQL;
   if DM.UniQuery1.RecordCount = 0 then
   begin
-    DM.T_role.Active := True;
-    DM.T_role.append;
-    DM.T_role.FieldByName('nomrole').asstring := rolename.Text;
-    DM.T_role.post;
+
   end
   else
   begin
     ShowMessage('Le role que vous voulez enregistrer exite deja')
   end;
-end;
-
-procedure TF_role.FormCreate(Sender: TObject);
-begin
-DM.UniDataSource1.dataset := DM.T_role;
 end;
 
 procedure TF_role.SpeedButton1Click(Sender: TObject);
@@ -86,17 +77,7 @@ procedure TF_role.Supprimerlerole1Click(Sender: TObject);
 var
   norm: Boolean;
 begin
-  if MessageDlg('Êtes-vous sûr de vouloir supprimer ce rôle ?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
-  begin
-    norm := DM.T_role.Locate('idrole', DM.T_role.FieldByName('idrole').AsInteger, []);
-    if norm then
-    begin
-      DM.T_role.Delete;
-      ShowMessage('Le rôle a été supprimé.');
-    end
-    else
-      ShowMessage('Le rôle n''a pas été trouvé.');
-  end;
+
 end;
 
 

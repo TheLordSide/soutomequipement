@@ -48,7 +48,6 @@ object F_admin: TF_admin
       Width = 1078
       Height = 642
       Align = alClient
-      Caption = 'PopupMenu1'
       ColumnCollection = <
         item
           Value = 50.000000000000000000
@@ -78,10 +77,6 @@ object F_admin: TF_admin
       object enregistrerunnouveau1: TMenuItem
         Caption = 'gerer les utlisateurs'
         OnClick = enregistrerunnouveau1Click
-      end
-      object gererlesroles1: TMenuItem
-        Caption = 'gerer les roles'
-        OnClick = gererlesroles1Click
       end
     end
     object Options1: TMenuItem

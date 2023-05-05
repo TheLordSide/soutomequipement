@@ -19,7 +19,6 @@ type
     enregistrerunnouveau1: TMenuItem;
     RelativePanel1: TRelativePanel;
     GridPanel1: TGridPanel;
-    gererlesroles1: TMenuItem;
     procedure Quitter1Click(Sender: TObject);
     procedure Deconnexion1Click(Sender: TObject);
     procedure enregistrerunnouveau1Click(Sender: TObject);

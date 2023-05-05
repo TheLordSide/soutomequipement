@@ -3,7 +3,7 @@ object F_users: TF_users
   Top = 0
   Caption = 'F_users'
   ClientHeight = 820
-  ClientWidth = 944
+  ClientWidth = 956
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,17 +16,18 @@ object F_users: TF_users
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 944
+    Width = 956
     Height = 820
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 944
     object RelativePanel1: TRelativePanel
       Left = 0
       Top = 0
-      Width = 944
+      Width = 956
       Height = 121
       ControlCollection = <>
       Align = alTop
@@ -41,11 +42,12 @@ object F_users: TF_users
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
+      ExplicitWidth = 944
     end
     object PageControl1: TPageControl
       Left = 0
       Top = 121
-      Width = 944
+      Width = 956
       Height = 699
       ActivePage = TabSheet1
       Align = alClient
@@ -56,12 +58,13 @@ object F_users: TF_users
       Font.Style = []
       ParentFont = False
       TabOrder = 1
+      ExplicitWidth = 944
       object TabSheet1: TTabSheet
         Caption = 'Nouvel Utilisateur'
         object GridPanel1: TGridPanel
           Left = 0
           Top = 0
-          Width = 936
+          Width = 948
           Height = 656
           Align = alClient
           BevelOuter = bvNone
@@ -96,11 +99,12 @@ object F_users: TF_users
               SizeStyle = ssAuto
             end>
           TabOrder = 0
+          ExplicitLeft = 3
           object CardPanel1: TCardPanel
             AlignWithMargins = True
-            Left = 237
+            Left = 240
             Top = 3
-            Width = 462
+            Width = 468
             Height = 650
             Align = alClient
             ActiveCard = Card1
@@ -108,22 +112,21 @@ object F_users: TF_users
             BevelOuter = bvNone
             Caption = 'CardPanel1'
             TabOrder = 0
-            ExplicitTop = 222
-            ExplicitHeight = 431
+            ExplicitLeft = 237
+            ExplicitWidth = 462
             object Card1: TCard
               Left = 0
               Top = 0
-              Width = 458
+              Width = 464
               Height = 646
               Caption = 'Card1'
               CardIndex = 0
               TabOrder = 0
-              ExplicitWidth = 185
-              ExplicitHeight = 41
+              ExplicitLeft = -2
               object RelativePanel2: TRelativePanel
                 Left = 0
                 Top = 0
-                Width = 458
+                Width = 464
                 Height = 201
                 ControlCollection = <
                   item
@@ -148,12 +151,13 @@ object F_users: TF_users
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
+                ExplicitTop = -3
                 object Image1: TImage
                   AlignWithMargins = True
-                  Left = 156
+                  Left = 159
                   Top = 3
                   Width = 145
-                  Height = 150
+                  Height = 142
                   Align = alTop
                   Anchors = []
                   Center = True
@@ -450,14 +454,14 @@ object F_users: TF_users
                   Proportional = True
                 end
                 object RelativePanel3: TRelativePanel
-                  Left = 139
-                  Top = 156
+                  Left = 142
+                  Top = 148
                   Width = 180
-                  Height = 38
+                  Height = 46
                   ControlCollection = <
                     item
                       Control = SpeedButton1
-                      AlignBottomWithPanel = True
+                      AlignBottomWithPanel = False
                       AlignHorizontalCenterWithPanel = False
                       AlignLeftWithPanel = True
                       AlignRightWithPanel = False
@@ -466,7 +470,7 @@ object F_users: TF_users
                     end
                     item
                       Control = SpeedButton2
-                      AlignBottomWithPanel = True
+                      AlignBottomWithPanel = False
                       AlignHorizontalCenterWithPanel = False
                       AlignLeftWithPanel = False
                       AlignRightWithPanel = True
@@ -477,21 +481,167 @@ object F_users: TF_users
                   TabOrder = 0
                   DesignSize = (
                     180
-                    38)
+                    46)
                   object SpeedButton1: TSpeedButton
                     Left = 0
                     Top = 5
                     Width = 73
-                    Height = 33
+                    Height = 40
                     Anchors = []
+                    Caption = 'Ouvrir'
+                    OnClick = SpeedButton1Click
                   end
                   object SpeedButton2: TSpeedButton
                     Left = 107
                     Top = 5
                     Width = 73
-                    Height = 33
+                    Height = 40
                     Anchors = []
+                    Caption = 'effacer'
+                    Font.Charset = DEFAULT_CHARSET
+                    Font.Color = clRed
+                    Font.Height = -20
+                    Font.Name = 'Segoe UI'
+                    Font.Style = []
+                    ParentFont = False
+                    OnClick = SpeedButton2Click
                   end
+                end
+              end
+              object pseudo: TEdit
+                AlignWithMargins = True
+                Left = 35
+                Top = 221
+                Width = 394
+                Height = 36
+                Margins.Left = 35
+                Margins.Top = 20
+                Margins.Right = 35
+                Align = alTop
+                TabOrder = 1
+                Text = 'Entrez nom utilisateur'
+                TextHint = 'Entrez nom utilisateur'
+                ExplicitLeft = 192
+                ExplicitTop = 248
+                ExplicitWidth = 121
+              end
+              object Edit2: TEdit
+                AlignWithMargins = True
+                Left = 35
+                Top = 339
+                Width = 394
+                Height = 36
+                Margins.Left = 35
+                Margins.Top = 20
+                Margins.Right = 35
+                Align = alTop
+                TabOrder = 2
+                Text = 'Entrez mot de passe'
+                TextHint = 'Entrez mot de passe'
+                ExplicitLeft = 192
+                ExplicitTop = 320
+                ExplicitWidth = 121
+              end
+              object Edit3: TEdit
+                AlignWithMargins = True
+                Left = 35
+                Top = 398
+                Width = 394
+                Height = 36
+                Margins.Left = 35
+                Margins.Top = 20
+                Margins.Right = 35
+                Align = alTop
+                TabOrder = 3
+                Text = 'Confirmez mot de passe'
+                TextHint = 'Confirmez mot de passe'
+                ExplicitLeft = 264
+                ExplicitTop = 392
+                ExplicitWidth = 121
+              end
+              object ComboBox1: TComboBox
+                AlignWithMargins = True
+                Left = 35
+                Top = 280
+                Width = 394
+                Height = 36
+                Margins.Left = 35
+                Margins.Top = 20
+                Margins.Right = 35
+                Align = alTop
+                CanUndoSelText = True
+                TabOrder = 4
+                TextHint = 'choisir un role'
+                Items.Strings = (
+                  'user'
+                  'admin')
+                ExplicitTop = 262
+              end
+              object GridPanel2: TGridPanel
+                Left = 0
+                Top = 592
+                Width = 464
+                Height = 54
+                Align = alBottom
+                BevelOuter = bvNone
+                ColumnCollection = <
+                  item
+                    Value = 50.000000000000000000
+                  end
+                  item
+                    Value = 50.000000000000000000
+                  end>
+                ControlCollection = <
+                  item
+                    Column = 0
+                    Control = SpeedButton3
+                    Row = 0
+                  end
+                  item
+                    Column = 1
+                    Control = SpeedButton4
+                    Row = 0
+                  end>
+                RowCollection = <
+                  item
+                    Value = 100.000000000000000000
+                  end>
+                TabOrder = 5
+                object SpeedButton3: TSpeedButton
+                  AlignWithMargins = True
+                  Left = 3
+                  Top = 3
+                  Width = 226
+                  Height = 48
+                  Align = alClient
+                  Caption = 'enregistrer'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clGreen
+                  Font.Height = -20
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  ExplicitLeft = 224
+                  ExplicitTop = 8
+                  ExplicitWidth = 23
+                  ExplicitHeight = 22
+                end
+                object SpeedButton4: TSpeedButton
+                  AlignWithMargins = True
+                  Left = 235
+                  Top = 3
+                  Width = 226
+                  Height = 48
+                  Align = alClient
+                  Caption = 'annuler'
+                  Font.Charset = DEFAULT_CHARSET
+                  Font.Color = clRed
+                  Font.Height = -20
+                  Font.Name = 'Segoe UI'
+                  Font.Style = []
+                  ParentFont = False
+                  ExplicitTop = 0
+                  ExplicitHeight = 38
                 end
               end
             end
@@ -504,5 +654,9 @@ object F_users: TF_users
         ImageIndex = 1
       end
     end
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Left = 652
+    Top = 187
   end
 end

@@ -7,7 +7,6 @@ object DM: TDM
     Database = 'soutombd'
     Username = 'root'
     Server = 'localhost'
-    Connected = True
     LoginPrompt = False
     Left = 56
     Top = 32
@@ -59,15 +58,13 @@ object DM: TDM
       Required = True
     end
   end
-  object T_role: TUniTable
-    TableName = 'role'
-    Connection = UniConnection
-    Active = True
-    Left = 168
-    Top = 216
-  end
   object UniDataSource1: TUniDataSource
     Left = 248
     Top = 216
+  end
+  object T_utilisateur: TUniTable
+    Connection = UniConnection
+    Left = 56
+    Top = 304
   end
 end
