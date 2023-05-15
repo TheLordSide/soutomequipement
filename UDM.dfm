@@ -7,6 +7,7 @@ object DM: TDM
     Database = 'soutombd'
     Username = 'root'
     Server = 'localhost'
+    Connected = True
     LoginPrompt = False
     Left = 56
     Top = 32
@@ -63,8 +64,39 @@ object DM: TDM
     Top = 216
   end
   object T_utilisateur: TUniTable
+    TableName = 'utilisateur'
     Connection = UniConnection
-    Left = 56
+    Active = True
+    Left = 48
     Top = 304
+    object T_utilisateuridutilisateur: TIntegerField
+      AutoGenerateValue = arAutoInc
+      FieldName = 'idutilisateur'
+    end
+    object T_utilisateurNomuti: TStringField
+      FieldName = 'Nomuti'
+      Required = True
+      Size = 30
+    end
+    object T_utilisateurMdp: TStringField
+      FieldName = 'Mdp'
+      Required = True
+      Size = 10
+    end
+    object T_utilisateurstatut: TStringField
+      FieldName = 'statut'
+      Required = True
+      Size = 15
+    end
+    object T_utilisateurrole: TStringField
+      FieldName = 'role'
+      Required = True
+    end
+    object T_utilisateurdatecreation: TDateField
+      FieldName = 'datecreation'
+    end
+    object T_utilisateurdatelast: TDateField
+      FieldName = 'datelast'
+    end
   end
 end

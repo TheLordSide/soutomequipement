@@ -33,9 +33,9 @@ object F_Menu: TF_Menu
       object Image1: TImage
         AlignWithMargins = True
         Left = 3
-        Top = 55
+        Top = 3
         Width = 194
-        Height = 146
+        Height = 78
         Align = alTop
         Center = True
         Picture.Data = {
@@ -329,26 +329,8 @@ object F_Menu: TF_Menu
           240000A0430200003A240000A0430200003A240000A0430200003A240000A043
           FF0FFDF714E23FFBF3F80000000049454E44AE426082}
         Proportional = True
-      end
-      object CardPanel1: TCardPanel
-        AlignWithMargins = True
-        Left = 3
-        Top = 3
-        Width = 194
-        Height = 46
-        Align = alTop
-        BevelOuter = bvNone
-        Caption = 'Dashbord'
-        Color = clActiveCaption
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -20
-        Font.Name = 'Segoe UI'
-        Font.Style = [fsBold]
-        ParentBackground = False
-        ParentFont = False
-        ShowCaption = True
-        TabOrder = 0
+        ExplicitLeft = 6
+        ExplicitTop = 0
       end
     end
   end

@@ -3,7 +3,7 @@ object F_users: TF_users
   Top = 0
   Caption = 'F_users'
   ClientHeight = 820
-  ClientWidth = 956
+  ClientWidth = 1057
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,22 +12,23 @@ object F_users: TF_users
   Font.Style = []
   Position = poScreenCenter
   StyleName = 'Windows'
+  OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 956
+    Width = 1057
     Height = 820
     Align = alClient
     BevelOuter = bvNone
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 944
+    ExplicitWidth = 953
     object RelativePanel1: TRelativePanel
       Left = 0
       Top = 0
-      Width = 956
+      Width = 1057
       Height = 121
       ControlCollection = <>
       Align = alTop
@@ -42,14 +43,14 @@ object F_users: TF_users
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 944
+      ExplicitWidth = 953
     end
     object PageControl1: TPageControl
       Left = 0
       Top = 121
-      Width = 956
+      Width = 1057
       Height = 699
-      ActivePage = TabSheet1
+      ActivePage = TabSheet2
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -58,13 +59,13 @@ object F_users: TF_users
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 944
+      ExplicitWidth = 953
       object TabSheet1: TTabSheet
         Caption = 'Nouvel Utilisateur'
         object GridPanel1: TGridPanel
           Left = 0
           Top = 0
-          Width = 948
+          Width = 1049
           Height = 656
           Align = alClient
           BevelOuter = bvNone
@@ -99,12 +100,12 @@ object F_users: TF_users
               SizeStyle = ssAuto
             end>
           TabOrder = 0
-          ExplicitLeft = 3
+          ExplicitWidth = 945
           object CardPanel1: TCardPanel
             AlignWithMargins = True
-            Left = 240
+            Left = 265
             Top = 3
-            Width = 468
+            Width = 519
             Height = 650
             Align = alClient
             ActiveCard = Card1
@@ -112,21 +113,21 @@ object F_users: TF_users
             BevelOuter = bvNone
             Caption = 'CardPanel1'
             TabOrder = 0
-            ExplicitLeft = 237
-            ExplicitWidth = 462
+            ExplicitLeft = 239
+            ExplicitWidth = 467
             object Card1: TCard
               Left = 0
               Top = 0
-              Width = 464
+              Width = 515
               Height = 646
               Caption = 'Card1'
               CardIndex = 0
               TabOrder = 0
-              ExplicitLeft = -2
+              ExplicitWidth = 463
               object RelativePanel2: TRelativePanel
                 Left = 0
                 Top = 0
-                Width = 464
+                Width = 515
                 Height = 201
                 ControlCollection = <
                   item
@@ -151,10 +152,10 @@ object F_users: TF_users
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
-                ExplicitTop = -3
+                ExplicitWidth = 463
                 object Image1: TImage
                   AlignWithMargins = True
-                  Left = 159
+                  Left = 185
                   Top = 3
                   Width = 145
                   Height = 142
@@ -454,7 +455,7 @@ object F_users: TF_users
                   Proportional = True
                 end
                 object RelativePanel3: TRelativePanel
-                  Left = 142
+                  Left = 167
                   Top = 148
                   Width = 180
                   Height = 46
@@ -512,75 +513,71 @@ object F_users: TF_users
                 AlignWithMargins = True
                 Left = 35
                 Top = 221
-                Width = 394
+                Width = 445
                 Height = 36
                 Margins.Left = 35
                 Margins.Top = 20
                 Margins.Right = 35
                 Align = alTop
                 TabOrder = 1
-                Text = 'Entrez nom utilisateur'
                 TextHint = 'Entrez nom utilisateur'
-                ExplicitLeft = 192
-                ExplicitTop = 248
-                ExplicitWidth = 121
+                ExplicitWidth = 393
               end
-              object Edit2: TEdit
+              object password: TEdit
                 AlignWithMargins = True
                 Left = 35
                 Top = 339
-                Width = 394
+                Width = 445
                 Height = 36
                 Margins.Left = 35
                 Margins.Top = 20
                 Margins.Right = 35
                 Align = alTop
+                ImeName = 'French'
                 TabOrder = 2
-                Text = 'Entrez mot de passe'
                 TextHint = 'Entrez mot de passe'
-                ExplicitLeft = 192
-                ExplicitTop = 320
-                ExplicitWidth = 121
+                ExplicitWidth = 393
               end
-              object Edit3: TEdit
+              object passwordconfirmed: TEdit
                 AlignWithMargins = True
                 Left = 35
                 Top = 398
-                Width = 394
+                Width = 445
                 Height = 36
                 Margins.Left = 35
                 Margins.Top = 20
                 Margins.Right = 35
                 Align = alTop
+                ImeName = 'French'
                 TabOrder = 3
-                Text = 'Confirmez mot de passe'
                 TextHint = 'Confirmez mot de passe'
-                ExplicitLeft = 264
-                ExplicitTop = 392
-                ExplicitWidth = 121
+                ExplicitWidth = 393
               end
-              object ComboBox1: TComboBox
+              object role: TComboBox
                 AlignWithMargins = True
                 Left = 35
                 Top = 280
-                Width = 394
+                Width = 445
                 Height = 36
                 Margins.Left = 35
                 Margins.Top = 20
                 Margins.Right = 35
                 Align = alTop
+                AutoComplete = False
+                Style = csDropDownList
+                ImeName = 'French'
                 CanUndoSelText = True
                 TabOrder = 4
                 TextHint = 'choisir un role'
                 Items.Strings = (
                   'user'
                   'admin')
-                ExplicitTop = 262
+                ExplicitWidth = 393
               end
               object GridPanel2: TGridPanel
                 Left = 0
                 Top = 592
-                Width = 464
+                Width = 515
                 Height = 54
                 Align = alBottom
                 BevelOuter = bvNone
@@ -607,11 +604,12 @@ object F_users: TF_users
                     Value = 100.000000000000000000
                   end>
                 TabOrder = 5
+                ExplicitWidth = 463
                 object SpeedButton3: TSpeedButton
                   AlignWithMargins = True
                   Left = 3
                   Top = 3
-                  Width = 226
+                  Width = 252
                   Height = 48
                   Align = alClient
                   Caption = 'enregistrer'
@@ -621,6 +619,7 @@ object F_users: TF_users
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentFont = False
+                  OnClick = SpeedButton3Click
                   ExplicitLeft = 224
                   ExplicitTop = 8
                   ExplicitWidth = 23
@@ -628,9 +627,9 @@ object F_users: TF_users
                 end
                 object SpeedButton4: TSpeedButton
                   AlignWithMargins = True
-                  Left = 235
+                  Left = 261
                   Top = 3
-                  Width = 226
+                  Width = 251
                   Height = 48
                   Align = alClient
                   Caption = 'annuler'
@@ -640,7 +639,10 @@ object F_users: TF_users
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentFont = False
+                  OnClick = SpeedButton4Click
+                  ExplicitLeft = 235
                   ExplicitTop = 0
+                  ExplicitWidth = 226
                   ExplicitHeight = 38
                 end
               end
@@ -652,11 +654,86 @@ object F_users: TF_users
         Caption = 'Liste Utilisateurs'
         Highlighted = True
         ImageIndex = 1
+        object GridPanel3: TGridPanel
+          Left = 225
+          Top = 0
+          Width = 824
+          Height = 656
+          Align = alClient
+          BevelOuter = bvNone
+          ColumnCollection = <
+            item
+              Value = 100.000000000000000000
+            end>
+          ControlCollection = <
+            item
+              Column = 0
+              Control = CRDBGrid1
+              Row = 0
+              RowSpan = 2
+            end>
+          RowCollection = <
+            item
+              Value = 50.000000000000000000
+            end
+            item
+              Value = 50.000000000000000000
+            end>
+          TabOrder = 0
+          ExplicitLeft = 220
+          ExplicitWidth = 832
+          object CRDBGrid1: TCRDBGrid
+            AlignWithMargins = True
+            Left = 3
+            Top = 3
+            Width = 818
+            Height = 650
+            Align = alClient
+            DataSource = DM.UniDataSource1
+            PopupMenu = PopupMenu1
+            TabOrder = 0
+            TitleFont.Charset = DEFAULT_CHARSET
+            TitleFont.Color = clWindowText
+            TitleFont.Height = -20
+            TitleFont.Name = 'Segoe UI'
+            TitleFont.Style = []
+          end
+        end
+        object Panel2: TPanel
+          Left = 0
+          Top = 0
+          Width = 225
+          Height = 656
+          Align = alLeft
+          BevelOuter = bvNone
+          TabOrder = 1
+          ExplicitLeft = -3
+          object SearchBox1: TSearchBox
+            AlignWithMargins = True
+            Left = 3
+            Top = 3
+            Width = 219
+            Height = 36
+            Align = alTop
+            BevelOuter = bvNone
+            TabOrder = 0
+            OnChange = SearchBox1Change
+            ExplicitWidth = 1018
+          end
+        end
       end
     end
   end
   object OpenPictureDialog1: TOpenPictureDialog
-    Left = 652
-    Top = 187
+    Left = 108
+    Top = 659
+  end
+  object PopupMenu1: TPopupMenu
+    Left = 540
+    Top = 544
+    object supprimer1: TMenuItem
+      Caption = 'supprimer'
+      OnClick = supprimer1Click
+    end
   end
 end

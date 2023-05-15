@@ -75,8 +75,14 @@ object F_admin: TF_admin
     object Utilisateurs1: TMenuItem
       Caption = 'Utilisateurs'
       object enregistrerunnouveau1: TMenuItem
-        Caption = 'gerer les utlisateurs'
+        Caption = 'g'#233'rer '
         OnClick = enregistrerunnouveau1Click
+      end
+    end
+    object Socits1: TMenuItem
+      Caption = 'Soci'#233't'#233's'
+      object grer1: TMenuItem
+        Caption = 'g'#233'rer '
       end
     end
     object Options1: TMenuItem

@@ -12,7 +12,6 @@ type
     Panel1: TPanel;
     SplitView1: TSplitView;
     Image1: TImage;
-    CardPanel1: TCardPanel;
     procedure CreateParams(var Params: TCreateParams); override;
   private
     { Déclarations privées }

@@ -24,6 +24,13 @@ type
     UniQuery1datelast: TDateField;
     UniDataSource1: TUniDataSource;
     T_utilisateur: TUniTable;
+    T_utilisateuridutilisateur: TIntegerField;
+    T_utilisateurNomuti: TStringField;
+    T_utilisateurMdp: TStringField;
+    T_utilisateurstatut: TStringField;
+    T_utilisateurrole: TStringField;
+    T_utilisateurdatecreation: TDateField;
+    T_utilisateurdatelast: TDateField;
   private
     { Déclarations privées }
   public
