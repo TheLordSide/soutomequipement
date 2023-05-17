@@ -124,7 +124,7 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Facture.pas">
-            <Form>Form1</Form>
+            <Form>F_facture</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Societe.pas">

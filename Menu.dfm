@@ -332,6 +332,52 @@ object F_Menu: TF_Menu
         ExplicitLeft = 6
         ExplicitTop = 0
       end
+      object GroupBox1: TGroupBox
+        AlignWithMargins = True
+        Left = 3
+        Top = 676
+        Width = 194
+        Height = 105
+        Align = alBottom
+        Caption = 'informations syt'#232'me'
+        TabOrder = 0
+        ExplicitLeft = 0
+        ExplicitTop = 679
+        ExplicitWidth = 185
+        object Label1: TLabel
+          AlignWithMargins = True
+          Left = 5
+          Top = 20
+          Width = 184
+          Height = 15
+          Align = alTop
+          Caption = 'Connect'#233' en tant que :'
+          ExplicitLeft = 6
+          ExplicitTop = 16
+          ExplicitWidth = 120
+        end
+        object Label2: TLabel
+          AlignWithMargins = True
+          Left = 5
+          Top = 41
+          Width = 184
+          Height = 15
+          Align = alTop
+          Caption = 'user_label'
+          ExplicitTop = 40
+          ExplicitWidth = 52
+        end
+        object Label3: TLabel
+          AlignWithMargins = True
+          Left = 5
+          Top = 62
+          Width = 184
+          Height = 15
+          Align = alTop
+          Caption = 'Date de connexion'
+          ExplicitWidth = 99
+        end
+      end
     end
   end
 end

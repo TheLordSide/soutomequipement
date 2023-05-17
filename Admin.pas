@@ -26,6 +26,7 @@ type
     procedure enregistrerunnouveau1Click(Sender: TObject);
     procedure CreateParams(var Params: TCreateParams); override;
     procedure gererlesroles1Click(Sender: TObject);
+    procedure grer1Click(Sender: TObject);
   private
     { Déclarations privées }
   public
@@ -39,7 +40,7 @@ implementation
 
 {$R *.dfm}
 
-uses Login, Menu, UDM, UserMgmt, Role;
+uses Login, Menu, UDM, UserMgmt, Role, Facture, Societe;
 
 procedure TF_admin.CreateParams(var Params: TCreateParams);
 begin
@@ -70,6 +71,11 @@ end;
 procedure TF_admin.gererlesroles1Click(Sender: TObject);
 begin
 F_role.ShowModal;
+end;
+
+procedure TF_admin.grer1Click(Sender: TObject);
+begin
+  F_societe.ShowModal;
 end;
 
 procedure TF_admin.Quitter1Click(Sender: TObject);

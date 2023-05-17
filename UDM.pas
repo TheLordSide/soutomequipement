@@ -7,7 +7,7 @@ uses
   FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
   FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
   FireDAC.Comp.Client, Data.DB, UniProvider, MySQLUniProvider, DBAccess, Uni,
-  MemDS;
+  MemDS, frxClass;
 
 type
   TDM = class(TDataModule)
@@ -31,6 +31,11 @@ type
     T_utilisateurrole: TStringField;
     T_utilisateurdatecreation: TDateField;
     T_utilisateurdatelast: TDateField;
+    T_socitete: TUniTable;
+    frxReport1: TfrxReport;
+    frxReport2: TfrxReport;
+    frxReport3: TfrxReport;
+    frxReport4: TfrxReport;
   private
     { Déclarations privées }
   public

@@ -1,0 +1,46 @@
+unit Facture;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.WinXCtrls,
+  Vcl.ExtCtrls, Vcl.Buttons, Vcl.WinXPanels, Vcl.DBCtrls, Vcl.WinXPickers;
+
+type
+  TF_facture = class(TForm)
+    Panel1: TPanel;
+    SplitView1: TSplitView;
+    RadioGroup1: TRadioGroup;
+    SpeedButton1: TSpeedButton;
+    FactureProforma: TPanel;
+    CategoryPanelGroup1: TCategoryPanelGroup;
+    CategoryPanel1: TCategoryPanel;
+    CategoryPanel2: TCategoryPanel;
+    CategoryPanel3: TCategoryPanel;
+    CategoryPanel4: TCategoryPanel;
+    Label1: TLabel;
+    DBLookupComboBox1: TDBLookupComboBox;
+    SpeedButton2: TSpeedButton;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    DatePicker1: TDatePicker;
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  F_facture: TF_facture;
+
+implementation
+
+{$R *.dfm}
+
+end.

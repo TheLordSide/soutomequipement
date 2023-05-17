@@ -8,7 +8,7 @@ uses
   Admin in 'Admin.pas' {F_admin},
   UserMgmt in 'UserMgmt.pas' {F_users},
   Role in 'Role.pas' {F_role},
-  Facture in 'Facture.pas' {Form1},
+  Facture in 'Facture.pas' {F_facture},
   Societe in 'Societe.pas' {F_societe};
 
 {$R *.res}
@@ -22,7 +22,7 @@ begin
   Application.CreateForm(TF_admin, F_admin);
   Application.CreateForm(TF_users, F_users);
   Application.CreateForm(TF_role, F_role);
-  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TF_facture, F_facture);
   Application.CreateForm(TF_societe, F_societe);
   Application.Run;
 end.

@@ -24,7 +24,6 @@ object F_users: TF_users
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitWidth = 953
     object RelativePanel1: TRelativePanel
       Left = 0
       Top = 0
@@ -43,14 +42,13 @@ object F_users: TF_users
       ParentBackground = False
       ParentFont = False
       TabOrder = 0
-      ExplicitWidth = 953
     end
     object PageControl1: TPageControl
       Left = 0
       Top = 121
       Width = 1057
       Height = 699
-      ActivePage = TabSheet2
+      ActivePage = TabSheet1
       Align = alClient
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
@@ -59,7 +57,7 @@ object F_users: TF_users
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitWidth = 953
+      StyleName = 'Windows'
       object TabSheet1: TTabSheet
         Caption = 'Nouvel Utilisateur'
         object GridPanel1: TGridPanel
@@ -100,7 +98,6 @@ object F_users: TF_users
               SizeStyle = ssAuto
             end>
           TabOrder = 0
-          ExplicitWidth = 945
           object CardPanel1: TCardPanel
             AlignWithMargins = True
             Left = 265
@@ -113,8 +110,6 @@ object F_users: TF_users
             BevelOuter = bvNone
             Caption = 'CardPanel1'
             TabOrder = 0
-            ExplicitLeft = 239
-            ExplicitWidth = 467
             object Card1: TCard
               Left = 0
               Top = 0
@@ -123,7 +118,6 @@ object F_users: TF_users
               Caption = 'Card1'
               CardIndex = 0
               TabOrder = 0
-              ExplicitWidth = 463
               object RelativePanel2: TRelativePanel
                 Left = 0
                 Top = 0
@@ -152,7 +146,6 @@ object F_users: TF_users
                 Align = alTop
                 BevelOuter = bvNone
                 TabOrder = 0
-                ExplicitWidth = 463
                 object Image1: TImage
                   AlignWithMargins = True
                   Left = 185
@@ -521,7 +514,6 @@ object F_users: TF_users
                 Align = alTop
                 TabOrder = 1
                 TextHint = 'Entrez nom utilisateur'
-                ExplicitWidth = 393
               end
               object password: TEdit
                 AlignWithMargins = True
@@ -536,7 +528,6 @@ object F_users: TF_users
                 ImeName = 'French'
                 TabOrder = 2
                 TextHint = 'Entrez mot de passe'
-                ExplicitWidth = 393
               end
               object passwordconfirmed: TEdit
                 AlignWithMargins = True
@@ -551,7 +542,6 @@ object F_users: TF_users
                 ImeName = 'French'
                 TabOrder = 3
                 TextHint = 'Confirmez mot de passe'
-                ExplicitWidth = 393
               end
               object role: TComboBox
                 AlignWithMargins = True
@@ -572,7 +562,6 @@ object F_users: TF_users
                 Items.Strings = (
                   'user'
                   'admin')
-                ExplicitWidth = 393
               end
               object GridPanel2: TGridPanel
                 Left = 0
@@ -604,7 +593,6 @@ object F_users: TF_users
                     Value = 100.000000000000000000
                   end>
                 TabOrder = 5
-                ExplicitWidth = 463
                 object SpeedButton3: TSpeedButton
                   AlignWithMargins = True
                   Left = 3
@@ -680,8 +668,6 @@ object F_users: TF_users
               Value = 50.000000000000000000
             end>
           TabOrder = 0
-          ExplicitLeft = 220
-          ExplicitWidth = 832
           object CRDBGrid1: TCRDBGrid
             AlignWithMargins = True
             Left = 3
@@ -707,7 +693,6 @@ object F_users: TF_users
           Align = alLeft
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitLeft = -3
           object SearchBox1: TSearchBox
             AlignWithMargins = True
             Left = 3
@@ -718,7 +703,6 @@ object F_users: TF_users
             BevelOuter = bvNone
             TabOrder = 0
             OnChange = SearchBox1Change
-            ExplicitWidth = 1018
           end
         end
       end
@@ -729,8 +713,8 @@ object F_users: TF_users
     Top = 659
   end
   object PopupMenu1: TPopupMenu
-    Left = 540
-    Top = 544
+    Left = 868
+    Top = 48
     object supprimer1: TMenuItem
       Caption = 'supprimer'
       OnClick = supprimer1Click
