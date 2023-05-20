@@ -1,0 +1,125 @@
+object F_admin: TF_admin
+  Left = 0
+  Top = 0
+  ClientHeight = 783
+  ClientWidth = 1010
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poScreenCenter
+  StyleName = 'Windows'
+  TextHeight = 15
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 1010
+    Height = 783
+    Align = alClient
+    BevelOuter = bvNone
+    Color = clWhite
+    ParentBackground = False
+    TabOrder = 0
+    ExplicitWidth = 1078
+    ExplicitHeight = 763
+    object RelativePanel1: TRelativePanel
+      Left = 0
+      Top = 0
+      Width = 1010
+      Height = 121
+      ControlCollection = <>
+      Align = alTop
+      BevelOuter = bvNone
+      Caption = 'DASHBORD ADMINISTRATEUR'
+      Color = clSkyBlue
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -20
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+      ExplicitWidth = 1078
+    end
+    object GridPanel1: TGridPanel
+      Left = 0
+      Top = 121
+      Width = 1010
+      Height = 662
+      Align = alClient
+      BevelOuter = bvNone
+      ColumnCollection = <
+        item
+          Value = 25.000000000000000000
+        end
+        item
+          Value = 49.856977664171380000
+        end
+        item
+          Value = 25.143022335828620000
+        end>
+      ControlCollection = <
+        item
+          Column = 1
+          Control = CardPanel1
+          Row = 0
+          RowSpan = 2
+        end>
+      RowCollection = <
+        item
+          Value = 50.000000000000000000
+        end
+        item
+          Value = 50.000000000000000000
+        end>
+      TabOrder = 1
+      ExplicitTop = 127
+      ExplicitWidth = 1078
+      object CardPanel1: TCardPanel
+        AlignWithMargins = True
+        Left = 255
+        Top = 100
+        Width = 498
+        Height = 462
+        Margins.Top = 100
+        Margins.Bottom = 100
+        Align = alClient
+        ActiveCard = Card1
+        Caption = 'CardPanel1'
+        TabOrder = 0
+        ExplicitLeft = 424
+        ExplicitTop = 288
+        ExplicitWidth = 300
+        ExplicitHeight = 200
+        object Card1: TCard
+          Left = 1
+          Top = 1
+          Width = 496
+          Height = 460
+          Caption = 'Card1'
+          CardIndex = 0
+          TabOrder = 0
+          ExplicitLeft = 0
+          ExplicitTop = 0
+          ExplicitWidth = 185
+          ExplicitHeight = 41
+          object Image1: TImage
+            Left = 32
+            Top = 16
+            Width = 105
+            Height = 105
+          end
+          object Image2: TImage
+            Left = 200
+            Top = 16
+            Width = 105
+            Height = 105
+          end
+        end
+      end
+    end
+  end
+end

@@ -9,7 +9,9 @@ object F_societe: TF_societe
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Position = poScreenCenter
   StyleName = 'Windows'
+  OnCreate = FormCreate
   TextHeight = 15
   object Panel1: TPanel
     Left = 0
@@ -23,7 +25,6 @@ object F_societe: TF_societe
     ParentBackground = False
     ShowCaption = False
     TabOrder = 0
-    ExplicitHeight = 762
     object PageControl1: TPageControl
       Left = 0
       Top = 121
@@ -39,7 +40,6 @@ object F_societe: TF_societe
       ParentFont = False
       TabOrder = 0
       StyleName = 'Windows'
-      ExplicitHeight = 641
       object TabSheet1: TTabSheet
         Caption = 'Nouvelle soci'#233't'#233
         object GridPanel1: TGridPanel
@@ -80,7 +80,6 @@ object F_societe: TF_societe
               SizeStyle = ssAuto
             end>
           TabOrder = 0
-          ExplicitHeight = 598
           object CardPanel1: TCardPanel
             AlignWithMargins = True
             Left = 276
@@ -93,7 +92,6 @@ object F_societe: TF_societe
             BevelOuter = bvNone
             Caption = 'CardPanel1'
             TabOrder = 0
-            ExplicitHeight = 592
             object Card1: TCard
               Left = 0
               Top = 0
@@ -102,7 +100,6 @@ object F_societe: TF_societe
               Caption = 'Card1'
               CardIndex = 0
               TabOrder = 0
-              ExplicitHeight = 588
               object email: TEdit
                 AlignWithMargins = True
                 Left = 35
@@ -116,7 +113,6 @@ object F_societe: TF_societe
                 ImeName = 'French'
                 TabOrder = 5
                 TextHint = 'Entrez l'#39'email'
-                ExplicitTop = 398
               end
               object tel: TEdit
                 AlignWithMargins = True
@@ -129,9 +125,8 @@ object F_societe: TF_societe
                 Margins.Right = 35
                 Align = alTop
                 ImeName = 'French'
-                TabOrder = 6
+                TabOrder = 3
                 TextHint = 'Entrez le num'#233'ro de t'#233'l'#233'phone'
-                ExplicitTop = 377
               end
               object adresse: TEdit
                 AlignWithMargins = True
@@ -144,9 +139,8 @@ object F_societe: TF_societe
                 Margins.Right = 35
                 Align = alTop
                 ImeName = 'French'
-                TabOrder = 7
+                TabOrder = 4
                 TextHint = 'Entrez l'#39'adresse'
-                ExplicitTop = 398
               end
               object RelativePanel2: TRelativePanel
                 Left = 0
@@ -175,7 +169,7 @@ object F_societe: TF_societe
                   end>
                 Align = alTop
                 BevelOuter = bvNone
-                TabOrder = 0
+                TabOrder = 6
                 object Image1: TImage
                   AlignWithMargins = True
                   Left = 195
@@ -541,7 +535,7 @@ object F_societe: TF_societe
                 Margins.Right = 35
                 Align = alTop
                 ImeName = 'French'
-                TabOrder = 1
+                TabOrder = 0
                 TextHint = 'Entrez le num'#233'ro fiscal'
                 StyleName = 'Windows'
               end
@@ -570,9 +564,8 @@ object F_societe: TF_societe
                 Margins.Right = 35
                 Align = alTop
                 ImeName = 'French'
-                TabOrder = 3
+                TabOrder = 1
                 TextHint = 'Entrez le num'#233'ro RCCM'#9
-                ExplicitTop = 259
               end
               object GridPanel2: TGridPanel
                 Left = 0
@@ -603,8 +596,7 @@ object F_societe: TF_societe
                   item
                     Value = 100.000000000000000000
                   end>
-                TabOrder = 4
-                ExplicitTop = 534
+                TabOrder = 7
                 object SpeedButton3: TSpeedButton
                   AlignWithMargins = True
                   Left = 3
@@ -619,6 +611,7 @@ object F_societe: TF_societe
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentFont = False
+                  OnClick = SpeedButton3Click
                   ExplicitLeft = 224
                   ExplicitTop = 8
                   ExplicitWidth = 23
@@ -638,6 +631,7 @@ object F_societe: TF_societe
                   Font.Name = 'Segoe UI'
                   Font.Style = []
                   ParentFont = False
+                  OnClick = SpeedButton4Click
                   ExplicitLeft = 235
                   ExplicitTop = 0
                   ExplicitWidth = 226
@@ -678,7 +672,6 @@ object F_societe: TF_societe
               Value = 50.000000000000000000
             end>
           TabOrder = 0
-          ExplicitHeight = 598
           object CRDBGrid1: TCRDBGrid
             AlignWithMargins = True
             Left = 3
@@ -703,7 +696,6 @@ object F_societe: TF_societe
           Align = alLeft
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitHeight = 598
           object SearchBox1: TSearchBox
             AlignWithMargins = True
             Left = 3
@@ -713,6 +705,8 @@ object F_societe: TF_societe
             Align = alTop
             BevelOuter = bvNone
             TabOrder = 0
+            TextHint = 'Rechercher par nom'
+            OnChange = SearchBox1Change
           end
         end
       end

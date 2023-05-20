@@ -5,22 +5,13 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
   System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Menus, Vcl.WinXCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Menus, Vcl.WinXCtrls,
+  Vcl.WinXPanels;
 
 type
   TF_admin = class(TForm)
     Panel1: TPanel;
-    MainMenu1: TMainMenu;
-    Fichier1: TMenuItem;
-    Utilisateurs1: TMenuItem;
-    Options1: TMenuItem;
-    Deconnexion1: TMenuItem;
-    Quitter1: TMenuItem;
-    enregistrerunnouveau1: TMenuItem;
     RelativePanel1: TRelativePanel;
-    GridPanel1: TGridPanel;
-    Socits1: TMenuItem;
-    grer1: TMenuItem;
     procedure Quitter1Click(Sender: TObject);
     procedure Deconnexion1Click(Sender: TObject);
     procedure enregistrerunnouveau1Click(Sender: TObject);

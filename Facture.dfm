@@ -2,7 +2,7 @@ object F_facture: TF_facture
   Left = 0
   Top = 0
   ClientHeight = 805
-  ClientWidth = 979
+  ClientWidth = 998
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -15,7 +15,7 @@ object F_facture: TF_facture
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 979
+    Width = 998
     Height = 805
     Align = alClient
     BevelOuter = bvNone
@@ -23,6 +23,7 @@ object F_facture: TF_facture
     ParentBackground = False
     TabOrder = 0
     StyleName = 'Windows'
+    ExplicitWidth = 979
     object SplitView1: TSplitView
       Left = 0
       Top = 0
@@ -65,17 +66,17 @@ object F_facture: TF_facture
     object FactureProforma: TPanel
       Left = 200
       Top = 0
-      Width = 779
+      Width = 798
       Height = 805
       Align = alClient
       BevelOuter = bvNone
       TabOrder = 1
+      ExplicitWidth = 779
       object CategoryPanelGroup1: TCategoryPanelGroup
         Left = 0
         Top = 0
-        Width = 779
+        Width = 798
         Height = 764
-        VertScrollBar.Position = 425
         VertScrollBar.Tracking = True
         Align = alClient
         BevelInner = bvNone
@@ -87,16 +88,14 @@ object F_facture: TF_facture
         HeaderFont.Name = 'Segoe UI'
         HeaderFont.Style = []
         TabOrder = 0
-        ExplicitTop = 10
-        ExplicitWidth = 753
-        ExplicitHeight = 687
+        ExplicitWidth = 779
         object CategoryPanel6: TCategoryPanel
-          Top = 560
+          Top = 985
           Caption = 'CategoryPanel6'
           TabOrder = 0
         end
         object CategoryPanel4: TCategoryPanel
-          Top = 360
+          Top = 785
           Caption = 'Activit'#233's r'#233'alis'#233'es sur le v'#233'hicule'
           TabOrder = 1
           object SpeedButton3: TSpeedButton
@@ -124,7 +123,7 @@ object F_facture: TF_facture
           end
         end
         object CategoryPanel5: TCategoryPanel
-          Top = 160
+          Top = 585
           Caption = 'D'#233'tails sur le v'#233'hicule'
           TabOrder = 2
           object Label11: TLabel
@@ -188,7 +187,7 @@ object F_facture: TF_facture
           end
         end
         object CategoryPanel3: TCategoryPanel
-          Top = -75
+          Top = 350
           Height = 235
           Caption = 'D'#233'tails sur le client'
           TabOrder = 3
@@ -233,7 +232,7 @@ object F_facture: TF_facture
             Width = 217
             Height = 23
             BevelOuter = bvNone
-            TabOrder = 0
+            TabOrder = 2
           end
           object Edit5: TEdit
             Left = 245
@@ -249,7 +248,7 @@ object F_facture: TF_facture
             Width = 217
             Height = 23
             BevelOuter = bvNone
-            TabOrder = 2
+            TabOrder = 0
           end
           object Edit7: TEdit
             Left = 245
@@ -267,7 +266,7 @@ object F_facture: TF_facture
           end
         end
         object CategoryPanel2: TCategoryPanel
-          Top = -300
+          Top = 125
           Height = 225
           Caption = 'D'#233'tails de la facture'
           TabOrder = 4
@@ -339,13 +338,13 @@ object F_facture: TF_facture
           end
         end
         object CategoryPanel1: TCategoryPanel
-          Top = -425
+          Top = 0
           Height = 125
           Caption = 'D'#233'tails de la soci'#233't'#233
           TabOrder = 5
           object Label1: TLabel
             Left = 24
-            Top = 21
+            Top = 18
             Width = 140
             Height = 15
             Caption = 'D'#233'signation de la soci'#233't'#233' : '
@@ -358,7 +357,7 @@ object F_facture: TF_facture
             Caption = 'D'#233'tails'
           end
           object DBLookupComboBox1: TDBLookupComboBox
-            Left = 188
+            Left = 244
             Top = 13
             Width = 218
             Height = 23
@@ -369,34 +368,47 @@ object F_facture: TF_facture
       object Panel2: TPanel
         Left = 0
         Top = 764
-        Width = 779
+        Width = 798
         Height = 41
         Align = alBottom
         BevelOuter = bvNone
         TabOrder = 1
-        ExplicitLeft = 184
-        ExplicitTop = 760
-        ExplicitWidth = 185
+        ExplicitWidth = 779
         object SpeedButton4: TSpeedButton
           AlignWithMargins = True
-          Left = 621
+          Left = 640
           Top = 3
           Width = 155
           Height = 35
+          Cursor = crHandPoint
           Align = alRight
-          Caption = 'enregistrer'
+          Caption = 'annuler'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clGreen
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
           ExplicitLeft = 624
           ExplicitTop = 0
           ExplicitHeight = 41
         end
         object SpeedButton5: TSpeedButton
           AlignWithMargins = True
-          Left = 472
+          Left = 491
           Top = 3
           Width = 143
           Height = 35
+          Cursor = crHandPoint
           Align = alRight
           Caption = 'annuler'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clRed
+          Font.Height = -12
+          Font.Name = 'Segoe UI'
+          Font.Style = []
+          ParentFont = False
+          ExplicitLeft = 472
         end
       end
     end

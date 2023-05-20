@@ -102,6 +102,7 @@ object DM: TDM
   object T_socitete: TUniTable
     TableName = 'societe'
     Connection = UniConnection
+    Active = True
     Left = 184
     Top = 312
   end
@@ -113,78 +114,15 @@ object DM: TDM
     PreviewOptions.Zoom = 1.000000000000000000
     PrintOptions.Printer = 'Par d'#233'faut'
     PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 45063.580515532410000000
-    ReportOptions.LastChange = 45063.580515532410000000
+    ReportOptions.CreateDate = 45066.535105844910000000
+    ReportOptions.LastChange = 45066.535105844910000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
       ''
       'end.')
-    Left = 376
-    Top = 64
-    Datasets = <>
-    Variables = <>
-    Style = <>
-  end
-  object frxReport2: TfrxReport
-    Version = '6.9.14'
-    DotMatrixReport = False
-    IniFile = '\Software\Fast Reports'
-    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
-    PreviewOptions.Zoom = 1.000000000000000000
-    PrintOptions.Printer = 'Par d'#233'faut'
-    PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 45063.580581122680000000
-    ReportOptions.LastChange = 45063.580581122680000000
-    ScriptLanguage = 'PascalScript'
-    ScriptText.Strings = (
-      'begin'
-      ''
-      'end.')
-    Left = 376
-    Top = 136
-    Datasets = <>
-    Variables = <>
-    Style = <>
-  end
-  object frxReport3: TfrxReport
-    Version = '6.9.14'
-    DotMatrixReport = False
-    IniFile = '\Software\Fast Reports'
-    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
-    PreviewOptions.Zoom = 1.000000000000000000
-    PrintOptions.Printer = 'Par d'#233'faut'
-    PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 45063.580662361110000000
-    ReportOptions.LastChange = 45063.580662361110000000
-    ScriptLanguage = 'PascalScript'
-    ScriptText.Strings = (
-      'begin'
-      ''
-      'end.')
-    Left = 376
-    Top = 208
-    Datasets = <>
-    Variables = <>
-    Style = <>
-  end
-  object frxReport4: TfrxReport
-    Version = '6.9.14'
-    DotMatrixReport = False
-    IniFile = '\Software\Fast Reports'
-    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
-    PreviewOptions.Zoom = 1.000000000000000000
-    PrintOptions.Printer = 'Par d'#233'faut'
-    PrintOptions.PrintOnSheet = 0
-    ReportOptions.CreateDate = 45063.580754062500000000
-    ReportOptions.LastChange = 45063.580754062500000000
-    ScriptLanguage = 'PascalScript'
-    ScriptText.Strings = (
-      'begin'
-      ''
-      'end.')
-    Left = 376
-    Top = 288
+    Left = 392
+    Top = 144
     Datasets = <>
     Variables = <>
     Style = <>
