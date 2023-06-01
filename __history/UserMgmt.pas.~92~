@@ -1,0 +1,188 @@
+unit UserMgmt;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants,
+  System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.WinXCtrls,
+  Vcl.ComCtrls, Vcl.Buttons, Vcl.Imaging.pngimage, Vcl.WinXPanels, Vcl.StdCtrls,
+  Vcl.ExtDlgs, Data.DB, Vcl.Grids, Vcl.DBGrids, CRGrid, Vcl.Menus;
+
+type
+  TF_users = class(TForm)
+    Panel1: TPanel;
+    RelativePanel1: TRelativePanel;
+    PageControl1: TPageControl;
+    TabSheet1: TTabSheet;
+    TabSheet2: TTabSheet;
+    GridPanel1: TGridPanel;
+    CardPanel1: TCardPanel;
+    Card1: TCard;
+    RelativePanel2: TRelativePanel;
+    Image1: TImage;
+    RelativePanel3: TRelativePanel;
+    pseudo: TEdit;
+    password: TEdit;
+    passwordconfirmed: TEdit;
+    role: TComboBox;
+    GridPanel2: TGridPanel;
+    SpeedButton3: TSpeedButton;
+    SpeedButton4: TSpeedButton;
+    SpeedButton1: TSpeedButton;
+    SpeedButton2: TSpeedButton;
+    OpenPictureDialog1: TOpenPictureDialog;
+    GridPanel3: TGridPanel;
+    CRDBGrid1: TCRDBGrid;
+    PopupMenu1: TPopupMenu;
+    supprimer1: TMenuItem;
+    Panel2: TPanel;
+    SearchBox1: TSearchBox;
+    procedure clearChamps(peudo, password, passwordconfirmed: TEdit);
+    procedure compteExistant(pseudo, password, passwordconfirmed: TEdit);
+    procedure CreateParams(var Params: TCreateParams); override;
+    procedure SpeedButton1Click(Sender: TObject);
+    procedure SpeedButton2Click(Sender: TObject);
+    procedure SpeedButton4Click(Sender: TObject);
+    procedure SpeedButton3Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure SearchBox1Change(Sender: TObject);
+    procedure supprimer1Click(Sender: TObject);
+  private
+    { Déclarations privées }
+  public
+    { Déclarations publiques }
+  end;
+
+var
+  F_users: TF_users;
+
+implementation
+
+{$R *.dfm}
+
+uses UDM;
+{ TF_users }
+
+procedure TF_users.clearChamps(peudo, password, passwordconfirmed: TEdit);
+begin
+  pseudo.Clear;
+  password.Clear;
+  passwordconfirmed.Clear
+end;
+
+procedure TF_users.compteExistant(pseudo, password, passwordconfirmed: TEdit);
+
+begin
+  if (pseudo.Text <> '') or (password.Text <> '') or
+    (passwordconfirmed.Text <> '') then
+  begin
+    DM.UniQuery1.Close;
+    DM.UniQuery1.Fields.Clear;
+    DM.UniQuery1.SQL.Text :=
+      'Select * from utilisateur where Nomuti = :username';
+    DM.UniQuery1.parambyname('username').asstring := pseudo.Text;
+    DM.UniQuery1.ExecSQL;
+    if DM.UniQuery1.RecordCount = 0 then
+    begin
+      DM.T_utilisateur.Active := true;
+      DM.T_utilisateur.Append;
+      // Ajouter les valeurs des champs de la table utilisateur ici
+      DM.T_utilisateur.FieldByName('Nomuti').asstring := pseudo.Text;
+      DM.T_utilisateur.FieldByName('Mdp').asstring := password.Text;
+      DM.T_utilisateur.FieldByName('statut').asstring := 'active';
+      DM.T_utilisateur.FieldByName('role').asstring := role.Text;
+      DM.T_utilisateur.FieldByName('datecreation').AsDateTime := Now();
+
+      DM.T_utilisateur.Post; // Enregistrer l'utilisateur dans la table
+      ShowMessage('Nouvel utilisateur enregistré avec succès !');
+    end
+    else
+    begin
+      ShowMessage('L'' utilisateur que vous voulez enregistrer exite deja')
+    end;
+  end
+  else
+  begin
+    ShowMessage('Vous avez un ou plusieurs champs vides');
+  end;
+
+end;
+
+procedure TF_users.CreateParams(var Params: TCreateParams);
+begin
+  inherited CreateParams(Params);
+  Params.ExStyle := Params.ExStyle or WS_EX_APPWINDOW;
+  Params.WndParent := GetDesktopWindow
+
+end;
+
+procedure TF_users.FormCreate(Sender: TObject);
+begin
+DM.T_utilisateur.Active:=True;
+DM.UniDataSource1.DataSet:=DM.T_utilisateur;
+CRDBGrid1.DataSource:=DM.UniDataSource1
+end;
+
+procedure TF_users.SearchBox1Change(Sender: TObject);
+var
+  searchValue: string;
+begin
+  searchValue := searchbox1.Text;
+  if searchValue = '' then
+    DM.T_utilisateur.Filtered := False
+  else
+  begin
+    DM.T_utilisateur.Filter := 'Nomuti LIKE ''%' + searchValue + '%''';
+    DM.T_utilisateur.Filtered := True;
+  end;
+end;
+
+procedure TF_users.SpeedButton1Click(Sender: TObject);
+Var
+  filename: string;
+begin
+  OpenPictureDialog1.Execute();
+  filename := OpenPictureDialog1.filename;
+  Image1.Picture.LoadFromFile(filename);
+end;
+
+procedure TF_users.SpeedButton2Click(Sender: TObject);
+Var
+  filename: string;
+begin
+  filename := ExtractFilePath(Application.ExeName) + 'res\img\avatar.png';
+  // Chemin absolu
+  if FileExists(filename) then
+    Image1.Picture.LoadFromFile(filename)
+  else
+    ShowMessage('Le fichier ' + filename + ' n''existe pas.');
+end;
+
+procedure TF_users.SpeedButton3Click(Sender: TObject);
+begin
+  compteExistant(pseudo, password, passwordconfirmed)
+end;
+
+procedure TF_users.SpeedButton4Click(Sender: TObject);
+begin
+  clearChamps(pseudo, password, passwordconfirmed)
+end;
+
+procedure TF_users.supprimer1Click(Sender: TObject);
+begin
+  if MessageDlg('Êtes-vous sûr de vouloir supprimer ce utilisateur ?', mtConfirmation, [mbYes, mbNo], 0) = mrYes then
+  begin
+
+    if DM.T_utilisateur.Locate('idutilisateur', DM.T_utilisateur.FieldByName('idutilisateur').AsInteger, []) then
+    begin
+      DM.T_utilisateur.Delete;
+      ShowMessage('Le rôle a été supprimé.');
+    end
+    else
+      ShowMessage('Le rôle n''a pas été trouvé.');
+  end;
+
+end;
+
+end.
